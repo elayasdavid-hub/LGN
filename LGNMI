@@ -1,0 +1,1510 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<link rel="stylesheet" href="style.css">
+<title>LGN MATCH INDEXX</title>
+
+<!-- PWA: manifest e íconos -->
+<link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#0f172a">
+<link rel="icon" type="image/png" sizes="192x192" href="icons/icon-192.png">
+<link rel="icon" type="image/png" sizes="512x512" href="icons/icon-512.png">
+
+<!-- PWA: soporte iOS (Safari no lee manifest.json del todo bien) -->
+<link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="LGN Match">
+
+<!-- PWA: soporte Android/Chrome -->
+<meta name="mobile-web-app-capable" content="yes">
+</head>
+
+<body>
+
+<div class="fondo-galaxia" aria-hidden="true">
+  <div class="estrellas estrellas-1"></div>
+  <div class="estrellas estrellas-2"></div>
+  <div class="particulas-flotantes">
+      <span class="particula-flotante" style="--left:59.7%; --size:1.8px; --dur:20.8s; --delay:-23.2s; --drift:-1px;"></span>
+      <span class="particula-flotante" style="--left:61.9%; --size:2.7px; --dur:26.7s; --delay:-7.1s; --drift:12px;"></span>
+      <span class="particula-flotante" style="--left:23.7%; --size:2.6px; --dur:18.8s; --delay:-6.0s; --drift:39px;"></span>
+      <span class="particula-flotante" style="--left:67.0%; --size:2.0px; --dur:20.1s; --delay:-11.4s; --drift:29px;"></span>
+      <span class="particula-flotante" style="--left:41.3%; --size:1.7px; --dur:16.6s; --delay:-27.3s; --drift:18px;"></span>
+      <span class="particula-flotante" style="--left:44.6%; --size:3.9px; --dur:27.3s; --delay:-20.2s; --drift:-13px;"></span>
+      <span class="particula-flotante" style="--left:7.4%; --size:3.7px; --dur:18.9s; --delay:-10.0s; --drift:-23px;"></span>
+      <span class="particula-flotante" style="--left:90.7%; --size:3.0px; --dur:21.7s; --delay:-20.3s; --drift:1px;"></span>
+      <span class="particula-flotante" style="--left:15.8%; --size:3.5px; --dur:18.4s; --delay:-0.1s; --drift:-19px;"></span>
+      <span class="particula-flotante" style="--left:30.0%; --size:2.2px; --dur:21.5s; --delay:-19.1s; --drift:-25px;"></span>
+      <span class="particula-flotante" style="--left:22.1%; --size:3.4px; --dur:22.2s; --delay:-14.2s; --drift:16px;"></span>
+      <span class="particula-flotante" style="--left:63.4%; --size:2.3px; --dur:29.9s; --delay:-24.4s; --drift:-34px;"></span>
+      <span class="particula-flotante" style="--left:79.3%; --size:3.0px; --dur:24.8s; --delay:-13.6s; --drift:-9px;"></span>
+      <span class="particula-flotante" style="--left:1.0%; --size:3.2px; --dur:28.7s; --delay:-7.4s; --drift:8px;"></span>
+      <span class="particula-flotante" style="--left:3.3%; --size:3.4px; --dur:20.7s; --delay:-19.6s; --drift:-31px;"></span>
+      <span class="particula-flotante" style="--left:94.2%; --size:2.2px; --dur:21.6s; --delay:-22.3s; --drift:14px;"></span>
+      <span class="particula-flotante" style="--left:99.9%; --size:3.2px; --dur:17.3s; --delay:-2.6s; --drift:-9px;"></span>
+      <span class="particula-flotante" style="--left:95.0%; --size:1.9px; --dur:31.4s; --delay:-15.9s; --drift:4px;"></span>
+      <span class="particula-flotante" style="--left:82.1%; --size:3.3px; --dur:29.9s; --delay:-14.6s; --drift:-12px;"></span>
+      <span class="particula-flotante" style="--left:17.2%; --size:3.7px; --dur:31.2s; --delay:-4.8s; --drift:-6px;"></span>
+      <span class="particula-flotante" style="--left:94.2%; --size:2.0px; --dur:30.6s; --delay:-9.4s; --drift:-13px;"></span>
+      <span class="particula-flotante" style="--left:12.9%; --size:1.6px; --dur:25.6s; --delay:-28.7s; --drift:11px;"></span>
+      <span class="particula-flotante" style="--left:88.0%; --size:3.8px; --dur:20.0s; --delay:-7.1s; --drift:16px;"></span>
+      <span class="particula-flotante" style="--left:24.3%; --size:2.1px; --dur:24.8s; --delay:-9.2s; --drift:-4px;"></span>
+      <span class="particula-flotante" style="--left:32.1%; --size:2.6px; --dur:28.9s; --delay:-10.9s; --drift:-2px;"></span>
+      <span class="particula-flotante" style="--left:7.5%; --size:3.6px; --dur:18.8s; --delay:-8.5s; --drift:0px;"></span>
+      <span class="particula-flotante" style="--left:55.6%; --size:1.9px; --dur:27.8s; --delay:-24.8s; --drift:31px;"></span>
+      <span class="particula-flotante" style="--left:84.7%; --size:3.6px; --dur:29.2s; --delay:-13.7s; --drift:-13px;"></span>
+      <span class="particula-flotante" style="--left:88.7%; --size:3.0px; --dur:25.1s; --delay:-20.2s; --drift:-26px;"></span>
+      <span class="particula-flotante" style="--left:47.6%; --size:3.7px; --dur:21.9s; --delay:-24.5s; --drift:-39px;"></span>
+      <span class="particula-flotante" style="--left:95.0%; --size:3.8px; --dur:23.8s; --delay:-16.7s; --drift:-10px;"></span>
+      <span class="particula-flotante" style="--left:6.8%; --size:2.1px; --dur:29.4s; --delay:-23.1s; --drift:-37px;"></span>
+
+  </div>
+</div>
+
+<div id="pwaInstallBar" class="pwa-install-bar">
+  <span class="pwa-install-texto">📲 Instala esta app en tu celular para usarla desde el inicio, sin navegador</span>
+  <div class="pwa-install-botones">
+    <button id="btnInstalarPWA" onclick="instalarPWA()">Instalar</button>
+    <button class="pwa-cerrar" onclick="ocultarInstallBar()" aria-label="Cerrar">✕</button>
+  </div>
+</div>
+
+<div class="logo-wrap">
+  <img src="logoLGN.png" alt="La Liga News" id="logo" class="logo" onclick="animarLogo()">
+</div>
+
+<h1>MATCH INDEX</h1>
+
+<div class="container">
+
+  <div class="card" id="cardA">
+    <h2>Equipo A</h2>
+    Nombre
+    <input id="nombreA" placeholder="Ej: Junior">
+    PJ
+    <input type="number" id="pjA" min="0">
+    PG
+    <input type="number" id="pgA" min="0">
+    GF
+    <input type="number" id="gfA" min="0">
+    GC
+    <input type="number" id="gcA" min="0">
+    PTS
+    <input type="number" id="ptsA" min="0">
+  </div>
+
+  <div class="card" id="cardB">
+    <h2>Equipo B</h2>
+    Nombre
+    <input id="nombreB" placeholder="Ej: Millonarios">
+    PJ
+    <input type="number" id="pjB" min="0">
+    PG
+    <input type="number" id="pgB" min="0">
+    GF
+    <input type="number" id="gfB" min="0">
+    GC
+    <input type="number" id="gcB" min="0">
+    PTS
+    <input type="number" id="ptsB" min="0">
+  </div>
+
+</div>
+
+<p id="error-msg" class="error-msg"></p>
+
+<div class="btn-row">
+  <button id="btnCalcular" onclick="calcular()">Calcular Pronóstico</button>
+  <button id="btnReset" class="btn-secundario" onclick="resetear()">Limpiar</button>
+</div>
+
+<div class="resultado" id="resultado">
+
+  <h2>Resultado</h2>
+
+  <p id="ifa"></p>
+  <p id="ifb"></p>
+  <p id="dif"></p>
+  <p id="favorito"></p>
+
+  <div class="if-compare">
+    <div class="if-bar-wrap">
+      <span class="if-bar-label" id="ifLabelA"></span>
+      <div class="if-bar-track"><div class="if-bar-fill if-bar-a" id="ifBarA"></div></div>
+    </div>
+    <div class="if-bar-wrap">
+      <span class="if-bar-label" id="ifLabelB"></span>
+      <div class="if-bar-track"><div class="if-bar-fill if-bar-b" id="ifBarB"></div></div>
+    </div>
+  </div>
+
+  <hr>
+
+  <div class="prob-row">
+    <span class="prob-label" id="labelA"></span>
+    <div class="prob-track"><div class="prob-fill prob-a" id="barA"></div></div>
+    <span class="prob-value" id="pa"></span>
+  </div>
+  <div class="prob-row">
+    <span class="prob-label">Empate</span>
+    <div class="prob-track"><div class="prob-fill prob-e" id="barE"></div></div>
+    <span class="prob-value" id="pe"></span>
+  </div>
+  <div class="prob-row">
+    <span class="prob-label" id="labelB"></span>
+    <div class="prob-track"><div class="prob-fill prob-b" id="barB"></div></div>
+    <span class="prob-value" id="pb"></span>
+  </div>
+
+  <div class="btn-compartir-row">
+    <button id="btnCompartir" class="btn-secundario btn-compartir" onclick="compartir()">Copiar resultado</button>
+    <button id="btnTarjeta" class="btn-tarjeta btn-compartir" onclick="abrirTarjeta()">📸 Generar tarjeta</button>
+  </div>
+  <p id="tarjetaErrorMsg" class="tarjeta-error-msg"></p>
+
+</div>
+
+<div class="modal-overlay" id="modalTarjeta">
+  <div class="modal-tarjeta">
+    <div class="modal-tarjeta-head">
+      <h3>Tarjeta lista para compartir</h3>
+      <button class="modal-cerrar" onclick="cerrarTarjeta()" aria-label="Cerrar">✕</button>
+    </div>
+    <div class="modal-tarjeta-img-wrap">
+      <img id="imgTarjeta" alt="Tarjeta de pronóstico LGN">
+    </div>
+    <div class="modal-tarjeta-botones">
+      <button id="btnDescargarTarjeta" onclick="descargarTarjeta()">Descargar imagen</button>
+      <button class="btn-secundario" onclick="cerrarTarjeta()">Cerrar</button>
+    </div>
+  </div>
+</div>
+
+<div class="historial" id="historial">
+  <h2>Historial de pronósticos</h2>
+  <div id="historialLista" class="historial-lista"></div>
+  <button id="btnLimpiarHist" class="btn-secundario" onclick="limpiarHistorial()">Borrar historial</button>
+</div>
+
+<script>
+
+let ultimoResultado=null;
+let tarjetaDataUrl=null;
+
+function animarLogo(){
+  const logo=document.getElementById("logo");
+  logo.classList.remove("logo-kick");
+  void logo.offsetWidth;
+  logo.classList.add("logo-kick");
+
+  const wrap=logo.parentElement;
+  const cantidad=10;
+  for(let i=0;i<cantidad;i++){
+    const p=document.createElement("span");
+    p.className="particula";
+    p.textContent="⚽";
+    const angulo=(Math.PI*2*i)/cantidad + Math.random()*0.4;
+    const distancia=70+Math.random()*40;
+    p.style.setProperty("--dx",(Math.cos(angulo)*distancia)+"px");
+    p.style.setProperty("--dy",(Math.sin(angulo)*distancia)+"px");
+    wrap.appendChild(p);
+    p.addEventListener("animationend",()=>p.remove());
+  }
+}
+
+function indice(pj,pg,gf,gc,pts){
+  let ppg=pts/pj;
+  let dgpg=(gf-gc)/pj;
+  let gfpg=gf/pj;
+  let vp=pg/pj;
+  return 0.40*ppg+0.30*dgpg+0.20*gfpg+0.10*vp;
+}
+
+function mostrarError(msg){
+  const el=document.getElementById("error-msg");
+  el.textContent=msg;
+  el.style.display=msg?"block":"none";
+}
+
+function animarNumero(el, destino, sufijo, duracion){
+  const inicio=0;
+  const t0=performance.now();
+  function paso(t){
+    const p=Math.min((t-t0)/duracion,1);
+    const valor=Math.round(inicio+(destino-inicio)*p);
+    el.textContent=valor+sufijo;
+    if(p<1) requestAnimationFrame(paso);
+  }
+  requestAnimationFrame(paso);
+}
+
+function calcular(){
+
+  mostrarError("");
+
+  const nombreA=document.getElementById("nombreA").value.trim()||"Equipo A";
+  const nombreB=document.getElementById("nombreB").value.trim()||"Equipo B";
+
+  const idsA=["pjA","pgA","gfA","gcA","ptsA"];
+  const idsB=["pjB","pgB","gfB","gcB","ptsB"];
+
+  for(const id of [...idsA,...idsB]){
+    const v=document.getElementById(id).value;
+    if(v===""){
+      mostrarError("Completa todos los campos numéricos de ambos equipos.");
+      return;
+    }
+  }
+
+  const pjA=parseFloat(document.getElementById("pjA").value);
+  const pgA=parseFloat(document.getElementById("pgA").value);
+  const gfA=parseFloat(document.getElementById("gfA").value);
+  const gcA=parseFloat(document.getElementById("gcA").value);
+  const ptsA=parseFloat(document.getElementById("ptsA").value);
+
+  const pjB=parseFloat(document.getElementById("pjB").value);
+  const pgB=parseFloat(document.getElementById("pgB").value);
+  const gfB=parseFloat(document.getElementById("gfB").value);
+  const gcB=parseFloat(document.getElementById("gcB").value);
+  const ptsB=parseFloat(document.getElementById("ptsB").value);
+
+  if(pjA<=0||pjB<=0){
+    mostrarError("Los Partidos Jugados (PJ) deben ser mayores que 0.");
+    return;
+  }
+
+  const btn=document.getElementById("btnCalcular");
+  btn.classList.add("cargando");
+  btn.disabled=true;
+
+  setTimeout(()=>{
+    btn.classList.remove("cargando");
+    btn.disabled=false;
+    procesarResultado(nombreA,nombreB,pjA,pgA,gfA,gcA,ptsA,pjB,pgB,gfB,gcB,ptsB);
+  },450);
+}
+
+function procesarResultado(nombreA,nombreB,pjA,pgA,gfA,gcA,ptsA,pjB,pgB,gfB,gcB,ptsB){
+
+  const ifA=indice(pjA,pgA,gfA,gcA,ptsA);
+  const ifB=indice(pjB,pgB,gfB,gcB,ptsB);
+  const d=Math.abs(ifA-ifB);
+
+  let ganaA,empate,ganaB;
+
+  if(d<=0.20){ ganaA=35; empate=30; ganaB=35; }
+  else if(d<=0.50){ ganaA=45; empate=30; ganaB=25; }
+  else if(d<=1){ ganaA=55; empate=25; ganaB=20; }
+  else if(d<=2){ ganaA=70; empate=20; ganaB=10; }
+  else{ ganaA=90; empate=7; ganaB=3; }
+
+  if(ifB>ifA){
+    const t=ganaA; ganaA=ganaB; ganaB=t;
+  }
+
+  const empatado = ifA===ifB;
+  const favorito = empatado ? "Empate técnico" : (ifA>ifB?nombreA:nombreB);
+
+  document.getElementById("ifa").innerHTML="<b>IF "+nombreA+":</b> "+ifA.toFixed(3);
+  document.getElementById("ifb").innerHTML="<b>IF "+nombreB+":</b> "+ifB.toFixed(3);
+  document.getElementById("dif").innerHTML="<b>Diferencia:</b> "+d.toFixed(3);
+  document.getElementById("favorito").innerHTML="<b>Favorito:</b> "+favorito;
+
+  document.getElementById("labelA").textContent=nombreA;
+  document.getElementById("labelB").textContent=nombreB;
+  document.getElementById("ifLabelA").textContent=nombreA;
+  document.getElementById("ifLabelB").textContent=nombreB;
+
+  const maxIf=Math.max(ifA,ifB,0.01);
+  requestAnimationFrame(()=>{
+    document.getElementById("ifBarA").style.width=Math.max((ifA/maxIf)*100,3)+"%";
+    document.getElementById("ifBarB").style.width=Math.max((ifB/maxIf)*100,3)+"%";
+  });
+
+  requestAnimationFrame(()=>{
+    document.getElementById("barA").style.width=ganaA+"%";
+    document.getElementById("barE").style.width=empate+"%";
+    document.getElementById("barB").style.width=ganaB+"%";
+  });
+
+  animarNumero(document.getElementById("pa"),ganaA,"%",600);
+  animarNumero(document.getElementById("pe"),empate,"%",600);
+  animarNumero(document.getElementById("pb"),ganaB,"%",600);
+
+  const cardA=document.getElementById("cardA");
+  const cardB=document.getElementById("cardB");
+  cardA.classList.remove("card-favorito");
+  cardB.classList.remove("card-favorito");
+  if(!empatado){
+    (ifA>ifB?cardA:cardB).classList.add("card-favorito");
+  }
+
+  const resultado=document.getElementById("resultado");
+  resultado.classList.remove("visible");
+  void resultado.offsetWidth;
+  resultado.classList.add("visible");
+
+  guardarHistorial({nombreA,nombreB,ifA,ifB,favorito,ganaA,empate,ganaB});
+
+  ultimoResultado={nombreA,nombreB,ifA,ifB,d,favorito,empatado,ganaA,empate,ganaB};
+}
+
+function resetear(){
+  document.querySelectorAll(".card input").forEach(i=>i.value="");
+  mostrarError("");
+  document.getElementById("resultado").classList.remove("visible");
+  document.getElementById("cardA").classList.remove("card-favorito");
+  document.getElementById("cardB").classList.remove("card-favorito");
+}
+
+function compartir(){
+  const texto=
+    document.getElementById("ifa").textContent+"\n"+
+    document.getElementById("ifb").textContent+"\n"+
+    document.getElementById("dif").textContent+"\n"+
+    document.getElementById("favorito").textContent+"\n"+
+    document.getElementById("labelA").textContent+": "+document.getElementById("pa").textContent+"\n"+
+    "Empate: "+document.getElementById("pe").textContent+"\n"+
+    document.getElementById("labelB").textContent+": "+document.getElementById("pb").textContent;
+
+  navigator.clipboard.writeText(texto).then(()=>{
+    const btn=document.getElementById("btnCompartir");
+    const original=btn.textContent;
+    btn.textContent="¡Copiado!";
+    setTimeout(()=>btn.textContent=original,1500);
+  });
+}
+
+/* ---------- TARJETA COMPARTIBLE (canvas) ---------- */
+
+function abrirTarjeta(){
+  if(!ultimoResultado){
+    mostrarError("Primero calcula un pronóstico para generar la tarjeta.");
+    return;
+  }
+
+  const btn=document.getElementById("btnTarjeta");
+  const errBox=document.getElementById("tarjetaErrorMsg");
+  errBox.textContent="";
+  errBox.style.display="none";
+  btn.disabled=true;
+  const textoOriginal=btn.textContent;
+  btn.textContent="Generando...";
+
+  intentarGenerarDataUrl(true)
+    .catch(err=>{
+      console.warn("No se pudo exportar con logo, reintentando sin logo:", err);
+      return intentarGenerarDataUrl(false);
+    })
+    .then(dataUrl=>{
+      tarjetaDataUrl=dataUrl;
+      document.getElementById("imgTarjeta").src=dataUrl;
+      document.getElementById("modalTarjeta").classList.add("visible");
+    })
+    .catch(err=>{
+      console.error("Error generando tarjeta:", err);
+      errBox.textContent="No se pudo generar la imagen en este navegador (el logo local bloquea la exportación del canvas). Abre el archivo con un servidor local (ej. Live Server de VS Code) en vez de hacer doble clic sobre el HTML, o vuelve a intentarlo.";
+      errBox.style.display="block";
+    })
+    .finally(()=>{
+      btn.disabled=false;
+      btn.textContent=textoOriginal;
+    });
+}
+
+function intentarGenerarDataUrl(conLogo){
+  return generarTarjetaCanvas(ultimoResultado,conLogo).then(canvas=>canvas.toDataURL("image/png"));
+}
+
+function cerrarTarjeta(){
+  document.getElementById("modalTarjeta").classList.remove("visible");
+}
+
+function descargarTarjeta(){
+  if(!tarjetaDataUrl) return;
+  const a=document.createElement("a");
+  a.href=tarjetaDataUrl;
+  const nombreArchivo=("LGN_"+ultimoResultado.nombreA+"_vs_"+ultimoResultado.nombreB)
+    .replace(/\s+/g,"_").replace(/[^a-zA-Z0-9_\-]/g,"");
+  a.download=nombreArchivo+".png";
+  document.body.appendChild(a);
+  a.click();
+  a.remove();
+}
+
+function trazarRectRedondeado(ctx,x,y,w,h,r){
+  ctx.beginPath();
+  ctx.moveTo(x+r,y);
+  ctx.arcTo(x+w,y,x+w,y+h,r);
+  ctx.arcTo(x+w,y+h,x,y+h,r);
+  ctx.arcTo(x,y+h,x,y,r);
+  ctx.arcTo(x,y,x+w,y,r);
+  ctx.closePath();
+}
+
+function cargarLogo(){
+  return new Promise(resolve=>{
+    const img=new Image();
+    img.onload=()=>resolve(img);
+    img.onerror=()=>resolve(null);
+    img.src="logoLGN.png";
+  });
+}
+
+function generarTarjetaCanvas(datos, conLogo){
+  const cargador = conLogo ? cargarLogo() : Promise.resolve(null);
+  return cargador.then(logoImg=>{
+
+    const W=1080, H=1350;
+    const canvas=document.createElement("canvas");
+    canvas.width=W;
+    canvas.height=H;
+    const ctx=canvas.getContext("2d");
+
+    /* fondo degradado */
+    const fondo=ctx.createLinearGradient(0,0,0,H);
+    fondo.addColorStop(0,"#0f172a");
+    fondo.addColorStop(1,"#16233f");
+    ctx.fillStyle=fondo;
+    ctx.fillRect(0,0,W,H);
+
+    /* franja superior e inferior de acento */
+    ctx.fillStyle="#38bdf8";
+    ctx.fillRect(0,0,W,14);
+    ctx.fillStyle="#f97316";
+    ctx.fillRect(0,H-14,W,14);
+
+    /* marco */
+    ctx.strokeStyle="rgba(148,163,184,0.35)";
+    ctx.lineWidth=2;
+    trazarRectRedondeado(ctx,40,40,W-80,H-80,28);
+    ctx.stroke();
+
+    let cursorY=110;
+
+    /* logo */
+    if(logoImg){
+      const logoW=130;
+      const logoH=logoW*(logoImg.height/logoImg.width);
+      ctx.drawImage(logoImg, W/2-logoW/2, cursorY, logoW, logoH);
+      cursorY+=logoH+30;
+    }else{
+      ctx.textAlign="center";
+      ctx.font="bold 34px Arial";
+      ctx.fillStyle="#38bdf8";
+      ctx.fillText("LGN", W/2, cursorY+20);
+      cursorY+=60;
+    }
+
+    /* titulo */
+    ctx.textAlign="center";
+    ctx.fillStyle="#38bdf8";
+    ctx.font="bold 30px Arial";
+    ctx.fillText("MATCH INDEX · PRONÓSTICO", W/2, cursorY);
+    cursorY+=60;
+
+    /* nombres de equipos + VS */
+    const favA = !datos.empatado && datos.ifA>datos.ifB;
+    const favB = !datos.empatado && datos.ifB>datos.ifA;
+
+    ctx.font="bold 46px Arial";
+    ctx.fillStyle=favA?"#22c55e":"#ffffff";
+    ctx.textAlign="left";
+    ajustarTextoAncho(ctx,datos.nombreA,80,cursorY,380);
+
+    ctx.textAlign="right";
+    ctx.fillStyle=favB?"#22c55e":"#ffffff";
+    ajustarTextoAncho(ctx,datos.nombreB,W-80,cursorY,380);
+
+    ctx.textAlign="center";
+    ctx.font="bold 34px Arial";
+    ctx.fillStyle="#94a3b8";
+    ctx.fillText("VS", W/2, cursorY);
+
+    cursorY+=55;
+
+    /* indice de forma (IF) */
+    ctx.font="20px Arial";
+    ctx.fillStyle="#cbd5e1";
+    ctx.textAlign="left";
+    ctx.fillText("IF: "+datos.ifA.toFixed(3), 80, cursorY);
+    ctx.textAlign="right";
+    ctx.fillText("IF: "+datos.ifB.toFixed(3), W-80, cursorY);
+
+    cursorY+=50;
+
+    /* barras comparativas de IF */
+    const maxIf=Math.max(datos.ifA,datos.ifB,0.01);
+    const barTrackW=W-160;
+    const barH=18;
+
+    ctx.fillStyle="#1e293b";
+    trazarRectRedondeado(ctx,80,cursorY,barTrackW,barH,9);
+    ctx.fill();
+    const anchoA=Math.max((datos.ifA/maxIf)*barTrackW,10);
+    ctx.fillStyle="#38bdf8";
+    trazarRectRedondeado(ctx,80,cursorY,anchoA,barH,9);
+    ctx.fill();
+
+    cursorY+=barH+14;
+
+    ctx.fillStyle="#1e293b";
+    trazarRectRedondeado(ctx,80,cursorY,barTrackW,barH,9);
+    ctx.fill();
+    const anchoB=Math.max((datos.ifB/maxIf)*barTrackW,10);
+    ctx.fillStyle="#f472b6";
+    trazarRectRedondeado(ctx,80,cursorY,anchoB,barH,9);
+    ctx.fill();
+
+    cursorY+=barH+50;
+
+    /* linea separadora */
+    ctx.strokeStyle="rgba(148,163,184,0.25)";
+    ctx.lineWidth=1;
+    ctx.beginPath();
+    ctx.moveTo(80,cursorY);
+    ctx.lineTo(W-80,cursorY);
+    ctx.stroke();
+
+    cursorY+=55;
+
+    /* favorito destacado */
+    ctx.textAlign="center";
+    ctx.font="22px Arial";
+    ctx.fillStyle="#94a3b8";
+    ctx.fillText("FAVORITO", W/2, cursorY);
+    cursorY+=42;
+    ctx.font="bold 38px Arial";
+    ctx.fillStyle="#22c55e";
+    ajustarTextoAncho(ctx,datos.favorito,W/2,cursorY,W-160,"center");
+
+    cursorY+=70;
+
+    /* barras de probabilidad A / Empate / B */
+    dibujarBarraProb(ctx,80,cursorY,barTrackW,datos.nombreA,datos.ganaA,"#22c55e");
+    cursorY+=90;
+    dibujarBarraProb(ctx,80,cursorY,barTrackW,"Empate",datos.empate,"#94a3b8");
+    cursorY+=90;
+    dibujarBarraProb(ctx,80,cursorY,barTrackW,datos.nombreB,datos.ganaB,"#f97316");
+    cursorY+=90;
+
+    /* pie de tarjeta */
+    ctx.textAlign="center";
+    ctx.font="16px Arial";
+    ctx.fillStyle="#64748b";
+    const fecha=new Date().toLocaleDateString("es-CO",{day:"2-digit",month:"long",year:"numeric"});
+    ctx.fillText("Liga News · "+fecha, W/2, H-55);
+
+    return canvas;
+  });
+}
+
+function ajustarTextoAncho(ctx,texto,x,y,maxAncho,alineacionCentro){
+  let fontActual=ctx.font;
+  let tamano=parseInt(fontActual.match(/(\d+)px/)[1],10);
+  while(ctx.measureText(texto).width>maxAncho && tamano>18){
+    tamano-=2;
+    ctx.font=fontActual.replace(/\d+px/, tamano+"px");
+  }
+  ctx.fillText(texto,x,y);
+}
+
+function dibujarBarraProb(ctx,x,y,ancho,etiqueta,porcentaje,color){
+  ctx.textAlign="left";
+  ctx.font="22px Arial";
+  ctx.fillStyle="#e2e8f0";
+  ajustarTextoAncho(ctx,etiqueta,x,y,ancho*0.55);
+
+  ctx.textAlign="right";
+  ctx.font="bold 24px Arial";
+  ctx.fillStyle=color;
+  ctx.fillText(porcentaje+"%", x+ancho, y);
+
+  const trackY=y+16;
+  const trackH=20;
+  ctx.fillStyle="#1e293b";
+  trazarRectRedondeado(ctx,x,trackY,ancho,trackH,10);
+  ctx.fill();
+
+  const anchoBarra=Math.max((porcentaje/100)*ancho,8);
+  ctx.fillStyle=color;
+  trazarRectRedondeado(ctx,x,trackY,anchoBarra,trackH,10);
+  ctx.fill();
+}
+
+const HIST_KEY="lgn_historial";
+
+function guardarHistorial(entry){
+  const lista=JSON.parse(localStorage.getItem(HIST_KEY)||"[]");
+  entry.fecha=new Date().toLocaleString("es-CO",{dateStyle:"short",timeStyle:"short"});
+  lista.unshift(entry);
+  if(lista.length>15) lista.pop();
+  localStorage.setItem(HIST_KEY,JSON.stringify(lista));
+  pintarHistorial();
+}
+
+function limpiarHistorial(){
+  localStorage.removeItem(HIST_KEY);
+  pintarHistorial();
+}
+
+function pintarHistorial(){
+  const lista=JSON.parse(localStorage.getItem(HIST_KEY)||"[]");
+  const cont=document.getElementById("historialLista");
+  if(lista.length===0){
+    cont.innerHTML="<p class='historial-vacio'>Aún no hay pronósticos guardados.</p>";
+    return;
+  }
+  cont.innerHTML=lista.map(h=>
+    "<div class='historial-item'>"+
+      "<div class='historial-top'>"+
+        "<span>"+h.nombreA+" <small>"+h.ifA.toFixed(3)+"</small> vs <small>"+h.ifB.toFixed(3)+"</small> "+h.nombreB+"</span>"+
+        "<span class='historial-fecha'>"+h.fecha+"</span>"+
+      "</div>"+
+      "<div class='historial-fav'>Favorito: <b>"+h.favorito+"</b> · "+h.ganaA+"% / "+h.empate+"% / "+h.ganaB+"%</div>"+
+    "</div>"
+  ).join("");
+}
+
+pintarHistorial();
+
+/* ---------- PWA: instalación y service worker ---------- */
+
+if("serviceWorker" in navigator){
+  window.addEventListener("load",()=>{
+    navigator.serviceWorker.register("sw.js").catch(err=>{
+      console.error("No se pudo registrar el service worker:",err);
+    });
+  });
+}
+
+let deferredPromptPWA=null;
+
+window.addEventListener("beforeinstallprompt",(e)=>{
+  e.preventDefault();
+  deferredPromptPWA=e;
+  document.getElementById("pwaInstallBar").classList.add("visible");
+});
+
+function instalarPWA(){
+  if(!deferredPromptPWA) return;
+  deferredPromptPWA.prompt();
+  deferredPromptPWA.userChoice.finally(()=>{
+    deferredPromptPWA=null;
+    ocultarInstallBar();
+  });
+}
+
+function ocultarInstallBar(){
+  document.getElementById("pwaInstallBar").classList.remove("visible");
+}
+
+window.addEventListener("appinstalled",()=>{
+  ocultarInstallBar();
+});
+
+</script>
+
+</body>
+</html>
+
+{
+  "name": "LGN Match Index",
+  "short_name": "LGN Match",
+  "description": "Calculadora de pronósticos de Liga News - Índice de Forma y probabilidades de partido.",
+  "start_url": "./CALCULADORA_LGN.html",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "background_color": "#0f172a",
+  "theme_color": "#0f172a",
+  "icons": [
+    {
+      "src": "icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "icons/icon-192-maskable.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "maskable"
+    },
+    {
+      "src": "icons/icon-512-maskable.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ]
+}
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+font-family:Arial, Helvetica, sans-serif;
+color:#fff;
+padding:40px;
+min-height:100vh;
+background:
+  radial-gradient(ellipse 1100px 750px at 12% 15%, rgba(56,189,248,.14), transparent 60%),
+  radial-gradient(ellipse 900px 700px at 88% 10%, rgba(168,85,247,.16), transparent 55%),
+  radial-gradient(ellipse 800px 800px at 50% 100%, rgba(249,115,22,.07), transparent 60%),
+  radial-gradient(ellipse 700px 600px at 90% 85%, rgba(56,189,248,.08), transparent 55%),
+  linear-gradient(180deg,#05070f 0%,#0b1224 45%,#0f172a 100%);
+background-attachment:fixed;
+overflow-x:hidden;
+position:relative;
+}
+
+/* ---------- FONDO DE GALAXIA ---------- */
+
+.fondo-galaxia{
+position:fixed;
+inset:0;
+z-index:-1;
+overflow:hidden;
+pointer-events:none;
+}
+
+.estrellas{
+position:absolute;
+inset:-100px;
+background-repeat:repeat;
+}
+
+.estrellas-1{
+background-image:
+  radial-gradient(1.6px 1.6px at 20px 30px, #ffffff, transparent),
+  radial-gradient(1.2px 1.2px at 90px 120px, #cbd5e1, transparent),
+  radial-gradient(1.6px 1.6px at 150px 60px, #ffffff, transparent),
+  radial-gradient(1.2px 1.2px at 200px 150px, #94a3b8, transparent),
+  radial-gradient(1.6px 1.6px at 60px 175px, #ffffff, transparent),
+  radial-gradient(1.2px 1.2px at 240px 40px, #cbd5e1, transparent),
+  radial-gradient(1.6px 1.6px at 110px 220px, #ffffff, transparent);
+background-size:260px 260px;
+animation:parpadeo1 6s ease-in-out infinite alternate;
+opacity:.8;
+}
+
+.estrellas-2{
+background-image:
+  radial-gradient(2px 2px at 40px 80px, #ffffff, transparent),
+  radial-gradient(1.6px 1.6px at 130px 20px, #38bdf8, transparent),
+  radial-gradient(2px 2px at 220px 130px, #ffffff, transparent),
+  radial-gradient(1.6px 1.6px at 300px 60px, #f472b6, transparent),
+  radial-gradient(1.6px 1.6px at 70px 230px, #ffffff, transparent),
+  radial-gradient(2px 2px at 350px 200px, #ffffff, transparent);
+background-size:380px 380px;
+animation:parpadeo2 9s ease-in-out infinite alternate;
+opacity:.55;
+}
+
+@keyframes parpadeo1{
+0%{ opacity:.5; }
+50%{ opacity:.95; }
+100%{ opacity:.6; }
+}
+
+@keyframes parpadeo2{
+0%{ opacity:.3; }
+50%{ opacity:.7; }
+100%{ opacity:.4; }
+}
+
+.particulas-flotantes{
+position:absolute;
+inset:0;
+}
+
+.particula-flotante{
+position:absolute;
+left:var(--left);
+bottom:-10px;
+width:var(--size);
+height:var(--size);
+border-radius:50%;
+background:radial-gradient(circle, rgba(255,255,255,.95), rgba(56,189,248,.2) 70%, transparent 100%);
+box-shadow:0 0 6px 1px rgba(255,255,255,.35);
+opacity:0;
+animation:flotar var(--dur) linear infinite;
+animation-delay:var(--delay);
+}
+
+@keyframes flotar{
+0%{
+  transform:translate(0,0);
+  opacity:0;
+}
+8%{
+  opacity:.85;
+}
+50%{
+  transform:translate(var(--drift), -55vh);
+}
+92%{
+  opacity:.4;
+}
+100%{
+  transform:translate(calc(var(--drift) * 2), -115vh);
+  opacity:0;
+}
+}
+
+@media (prefers-reduced-motion: reduce){
+.estrellas-1, .estrellas-2, .particula-flotante{
+  animation:none;
+}
+}
+
+/* ---------- BANNER DE INSTALACIÓN PWA ---------- */
+
+.pwa-install-bar{
+display:none;
+position:fixed;
+left:20px;
+right:20px;
+bottom:20px;
+z-index:1100;
+background:#1e293b;
+border:1px solid rgba(56,189,248,.4);
+border-radius:14px;
+padding:14px 16px;
+box-shadow:0 15px 40px rgba(0,0,0,.5);
+align-items:center;
+gap:14px;
+justify-content:space-between;
+flex-wrap:wrap;
+max-width:600px;
+margin:0 auto;
+}
+
+.pwa-install-bar.visible{
+display:flex;
+animation:aparecer .3s ease forwards;
+}
+
+.pwa-install-texto{
+font-size:14px;
+color:#e2e8f0;
+flex:1;
+min-width:220px;
+}
+
+.pwa-install-botones{
+display:flex;
+gap:8px;
+align-items:center;
+}
+
+.pwa-install-botones button{
+padding:10px 20px;
+font-size:14px;
+}
+
+.pwa-cerrar{
+background:transparent;
+padding:6px 10px;
+color:#94a3b8;
+}
+
+.pwa-cerrar:hover{
+background:rgba(148,163,184,.15);
+transform:none;
+color:#fff;
+}
+
+@media(max-width:480px){
+.pwa-install-bar{
+  left:12px;
+  right:12px;
+  bottom:12px;
+  padding:12px;
+}
+}
+
+.logo-wrap{
+position:relative;
+display:flex;
+justify-content:center;
+margin-bottom:10px;
+}
+
+.logo{
+width:150px;
+cursor:pointer;
+user-select:none;
+filter:drop-shadow(0 0 12px rgba(56,189,248,.35));
+transition:filter .25s ease;
+}
+
+.logo:hover{
+filter:drop-shadow(0 0 20px rgba(56,189,248,.6));
+}
+
+.logo-kick{
+animation:patada .6s ease;
+}
+
+@keyframes patada{
+0%{ transform:scale(1) rotate(0deg); }
+30%{ transform:scale(.85) rotate(-8deg); }
+55%{ transform:scale(1.15) rotate(14deg); }
+75%{ transform:scale(.97) rotate(-4deg); }
+100%{ transform:scale(1) rotate(0deg); }
+}
+
+.particula{
+position:absolute;
+top:50%;
+left:50%;
+font-size:20px;
+pointer-events:none;
+animation:volar .7s ease-out forwards;
+}
+
+@keyframes volar{
+0%{
+transform:translate(-50%,-50%) translate(0,0) scale(1) rotate(0deg);
+opacity:1;
+}
+100%{
+transform:translate(-50%,-50%) translate(var(--dx),var(--dy)) scale(.4) rotate(260deg);
+opacity:0;
+}
+}
+
+h1{
+text-align:center;
+margin-bottom:40px;
+font-size:38px;
+color:#38bdf8;
+}
+
+.container{
+display:flex;
+justify-content:center;
+gap:30px;
+flex-wrap:wrap;
+}
+
+.card{
+background:#1e293b;
+padding:25px;
+border-radius:15px;
+width:320px;
+box-shadow:0 0 20px rgba(0,0,0,.4);
+transition:.3s;
+border:2px solid transparent;
+}
+
+.card:hover{
+transform:translateY(-5px);
+box-shadow:0 10px 30px rgba(56,189,248,.2);
+}
+
+.card.card-favorito{
+border-color:#22c55e;
+box-shadow:0 0 25px rgba(34,197,94,.35);
+}
+
+.card h2{
+margin-bottom:20px;
+text-align:center;
+color:#38bdf8;
+}
+
+input{
+width:100%;
+padding:12px;
+margin-bottom:15px;
+border:2px solid transparent;
+border-radius:8px;
+background:#334155;
+color:white;
+font-size:15px;
+transition:border-color .25s ease, background .25s ease, box-shadow .25s ease;
+}
+
+input:focus{
+outline:none;
+background:#475569;
+border-color:#38bdf8;
+box-shadow:0 0 0 3px rgba(56,189,248,.25);
+}
+
+.error-msg{
+max-width:670px;
+margin:15px auto 0;
+text-align:center;
+color:#fca5a5;
+background:rgba(248,113,113,.12);
+border:1px solid rgba(248,113,113,.4);
+border-radius:8px;
+padding:10px;
+display:none;
+}
+
+.btn-row{
+display:flex;
+gap:15px;
+justify-content:center;
+margin:40px auto;
+max-width:670px;
+}
+
+button{
+padding:16px 45px;
+font-size:18px;
+background:#0ea5e9;
+color:white;
+border:none;
+border-radius:10px;
+cursor:pointer;
+transition:.3s;
+position:relative;
+}
+
+button:hover{
+background:#0284c7;
+transform:scale(1.05);
+}
+
+.btn-secundario{
+background:#334155;
+}
+
+.btn-secundario:hover{
+background:#475569;
+}
+
+#btnCalcular.cargando{
+color:transparent;
+pointer-events:none;
+}
+
+#btnCalcular.cargando::after{
+content:"";
+position:absolute;
+top:50%;
+left:50%;
+width:20px;
+height:20px;
+margin:-10px 0 0 -10px;
+border:3px solid rgba(255,255,255,.35);
+border-top-color:#fff;
+border-radius:50%;
+animation:girar .7s linear infinite;
+}
+
+@keyframes girar{
+to{ transform:rotate(360deg); }
+}
+
+.resultado{
+max-width:750px;
+margin:40px auto;
+background:#1e293b;
+padding:30px;
+border-radius:15px;
+box-shadow:0 0 25px rgba(0,0,0,.4);
+opacity:0;
+transform:translateY(25px);
+}
+
+.resultado.visible{
+animation:aparecer .5s ease forwards;
+}
+
+@keyframes aparecer{
+to{
+opacity:1;
+transform:translateY(0);
+}
+}
+
+.resultado h2{
+text-align:center;
+margin-bottom:25px;
+color:#38bdf8;
+}
+
+.resultado p{
+font-size:18px;
+padding:12px;
+margin:8px 0;
+background:#334155;
+border-left:5px solid #38bdf8;
+border-radius:6px;
+}
+
+.if-compare{
+margin:20px 0;
+display:flex;
+flex-direction:column;
+gap:12px;
+}
+
+.if-bar-wrap{
+display:flex;
+align-items:center;
+gap:12px;
+}
+
+.if-bar-label{
+width:110px;
+flex-shrink:0;
+font-size:14px;
+color:#cbd5e1;
+white-space:nowrap;
+overflow:hidden;
+text-overflow:ellipsis;
+}
+
+.if-bar-track{
+flex:1;
+height:14px;
+background:#334155;
+border-radius:7px;
+overflow:hidden;
+}
+
+.if-bar-fill{
+height:100%;
+width:0%;
+border-radius:7px;
+transition:width 1s cubic-bezier(.22,.9,.3,1);
+}
+
+.if-bar-a{ background:#38bdf8; }
+.if-bar-b{ background:#f472b6; }
+
+.prob-row{
+display:flex;
+align-items:center;
+gap:12px;
+margin:12px 0;
+}
+
+.prob-label{
+width:110px;
+flex-shrink:0;
+font-size:14px;
+color:#cbd5e1;
+white-space:nowrap;
+overflow:hidden;
+text-overflow:ellipsis;
+}
+
+.prob-track{
+flex:1;
+height:18px;
+background:#334155;
+border-radius:9px;
+overflow:hidden;
+}
+
+.prob-fill{
+height:100%;
+width:0%;
+border-radius:9px;
+transition:width 1s cubic-bezier(.22,.9,.3,1);
+}
+
+.prob-a{ background:#22c55e; }
+.prob-e{ background:#94a3b8; }
+.prob-b{ background:#f97316; }
+
+.prob-value{
+width:48px;
+text-align:right;
+font-weight:bold;
+color:#38bdf8;
+}
+
+.btn-compartir-row{
+display:flex;
+gap:15px;
+justify-content:center;
+flex-wrap:wrap;
+margin:25px auto 0;
+}
+
+.tarjeta-error-msg{
+display:none;
+max-width:600px;
+margin:15px auto 0;
+text-align:center;
+color:#fca5a5;
+background:rgba(248,113,113,.12);
+border:1px solid rgba(248,113,113,.4);
+border-radius:8px;
+padding:10px 14px;
+font-size:14px;
+}
+
+.btn-compartir{
+padding:12px 30px;
+font-size:15px;
+}
+
+.btn-tarjeta{
+background:#f97316;
+color:#fff;
+}
+
+.btn-tarjeta:hover{
+background:#ea6a0c;
+}
+
+.btn-tarjeta:disabled{
+opacity:.6;
+pointer-events:none;
+}
+
+.modal-overlay{
+display:none;
+position:fixed;
+inset:0;
+background:rgba(2,6,23,.82);
+z-index:1000;
+align-items:center;
+justify-content:center;
+padding:20px;
+}
+
+.modal-overlay.visible{
+display:flex;
+animation:aparecer .25s ease forwards;
+}
+
+.modal-tarjeta{
+background:#1e293b;
+border-radius:16px;
+padding:20px;
+max-width:420px;
+width:100%;
+box-shadow:0 20px 60px rgba(0,0,0,.55);
+border:1px solid rgba(148,163,184,.2);
+}
+
+.modal-tarjeta-head{
+display:flex;
+align-items:center;
+justify-content:space-between;
+margin-bottom:15px;
+}
+
+.modal-tarjeta-head h3{
+color:#38bdf8;
+font-size:18px;
+}
+
+.modal-cerrar{
+background:transparent;
+padding:4px 10px;
+font-size:16px;
+color:#94a3b8;
+}
+
+.modal-cerrar:hover{
+background:rgba(148,163,184,.15);
+transform:none;
+color:#fff;
+}
+
+.modal-tarjeta-img-wrap{
+width:100%;
+max-height:60vh;
+overflow-y:auto;
+border-radius:10px;
+background:#0f172a;
+display:flex;
+justify-content:center;
+}
+
+.modal-tarjeta-img-wrap img{
+width:100%;
+height:auto;
+display:block;
+border-radius:10px;
+}
+
+.modal-tarjeta-botones{
+display:flex;
+gap:12px;
+margin-top:18px;
+}
+
+.modal-tarjeta-botones button{
+flex:1;
+padding:12px 10px;
+font-size:15px;
+}
+
+hr{
+margin:20px 0;
+border:none;
+height:1px;
+background:#475569;
+}
+
+b{
+color:#38bdf8;
+}
+
+.historial{
+max-width:750px;
+margin:40px auto;
+background:#1e293b;
+padding:30px;
+border-radius:15px;
+box-shadow:0 0 25px rgba(0,0,0,.4);
+}
+
+.historial h2{
+text-align:center;
+margin-bottom:20px;
+color:#38bdf8;
+}
+
+.historial-lista{
+display:flex;
+flex-direction:column;
+gap:10px;
+margin-bottom:20px;
+}
+
+.historial-item{
+background:#334155;
+border-left:5px solid #38bdf8;
+border-radius:6px;
+padding:12px 15px;
+}
+
+.historial-top{
+display:flex;
+justify-content:space-between;
+gap:10px;
+flex-wrap:wrap;
+font-size:15px;
+}
+
+.historial-fecha{
+color:#94a3b8;
+font-size:13px;
+}
+
+.historial-fav{
+margin-top:6px;
+font-size:14px;
+color:#cbd5e1;
+}
+
+.historial-vacio{
+text-align:center;
+color:#94a3b8;
+padding:10px;
+}
+
+@media(max-width:768px){
+
+body{
+padding:20px;
+}
+
+.container{
+flex-direction:column;
+align-items:center;
+}
+
+.card{
+width:100%;
+}
+
+.btn-row{
+flex-direction:column;
+}
+
+button{
+width:100%;
+}
+
+.resultado, .historial{
+width:100%;
+}
+
+.if-bar-label, .prob-label{
+width:80px;
+font-size:12px;
+}
+
+}
+
+const CACHE_NAME = "lgn-match-index-v1";
+
+const ARCHIVOS_CACHE = [
+  "./CALCULADORA_LGN.html",
+  "./style.css",
+  "./logoLGN.png",
+  "./manifest.json",
+  "./icons/icon-192.png",
+  "./icons/icon-512.png",
+  "./icons/icon-192-maskable.png",
+  "./icons/icon-512-maskable.png",
+  "./icons/apple-touch-icon.png"
+];
+
+self.addEventListener("install", (evento) => {
+  evento.waitUntil(
+    caches.open(CACHE_NAME).then((cache) => cache.addAll(ARCHIVOS_CACHE))
+  );
+  self.skipWaiting();
+});
+
+self.addEventListener("activate", (evento) => {
+  evento.waitUntil(
+    caches.keys().then((nombres) =>
+      Promise.all(
+        nombres
+          .filter((nombre) => nombre !== CACHE_NAME)
+          .map((nombre) => caches.delete(nombre))
+      )
+    )
+  );
+  self.clients.claim();
+});
+
+self.addEventListener("fetch", (evento) => {
+  if (evento.request.method !== "GET") return;
+
+  evento.respondWith(
+    caches.match(evento.request).then((respuestaCache) => {
+      if (respuestaCache) return respuestaCache;
+
+      return fetch(evento.request)
+        .then((respuestaRed) => {
+          const copia = respuestaRed.clone();
+          caches.open(CACHE_NAME).then((cache) => {
+            cache.put(evento.request, copia);
+          });
+          return respuestaRed;
+        })
+        .catch(() => caches.match("./CALCULADORA_LGN.html"));
+    })
+  );
+});
