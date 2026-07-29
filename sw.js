@@ -1,4 +1,4 @@
-const CACHE_NAME = "lgn-match-index-v1";
+const CACHE_NAME = "lgn-match-index-v2";
 
 const ARCHIVOS_CACHE = [
   "./CALCULADORA_LGN.html",
